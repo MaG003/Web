@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mai Hoàng Việt</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+
+        <script src="script.js" async defer></script>
+    </head>
+       
+        <body>
+            <div class="container">
+                <div class="sidebar">
+                    <div class="sidebar-block">
+                        <div class="title-name">
+                            <img src="avata.jpg" alt="avatar" id="avatar">
+                            <p class="name head">MAI HOÀNG VIỆT</p>
+                        </div>
+                        <p class="option">Thư báo  <i class="fa-solid fa-circle-exclamation" style="color: #f00000;"></i></p>
+                        <p class="option">Đổi mật khẩu</p>
+                        <p class="option">Cấp lại mật khẩu</p>
+                        <p class="option">Thoát đăng nhập</p>
+                        <p class="option">Thông tin mật khẩu Email cấp mới</p>
+                        <p class="option">Xác nhận khai báo y tế</p>
+                    </div>
+                    <div class="sidebar-block">
+                        <p class="head  head-center">QUẢN LÝ HỒ SƠ SINH VIÊN</p>
+                        <p class="option">Thông tin sinh viên</p>
+                        <p class="option">Cập nhật thông tin cá nhân</p>
+                        <p class="option">Thông tin lớp sinh viên</p>
+                    </div>
+                    <div class="sidebar-block">
+                        <p class="head  head-center">ĐÀO TẠO</p>
+                        <p class="option">Chương trình đào tạo</p>
+                        <p class="option">Kế hoạch học tập</p>
+                        <p class="option">Kết quả học tập</p>
+                        <p class="option">Đồ án tốt nghiệp</p>
+                        <p class="option">Thời khoá biểu tạm thời</p>
+                    </div>
+                    <div class="sidebar-block">
+                        <p class="head  head-center">TƯ VẤN TRỰC TUYẾN</p>
+                        <p class="option">Hỏi đáp - Tư vấn trực tuyến </p>
+                    </div>
+                    <div class="sidebar-block">
+                        <p class="head head-center">TÀI CHÍNH HỌC VỤ</p>
+                        <p class="option">Thông tin công nợ học phí</p>
+                        <p class="option">Thanh toán học phí trực tuyến</p>
+                    </div>
+                    <div class="sidebar-block">
+                        <p class="head  head-center">DỊCH VỤ HÀNH CHÍNH</p>
+                        <p class="option">ĐK cấp giấy tờ</p>
+                        
+                    </div>  
+                    
+                </div>
+
+                <div class="content">
+                    <div class="header-content head head-center"><p> THÔNG TIN CÁ NHÂN <i class="fa-sharp fa-solid fa-file-pdf" id="pdf"></i> </p></div>
+                    <div class="content-content ">
+                        <form class="form" action="infro.php">
+                            <div>
+                                <fieldset class="person">
+                                    <legend class="legend ">
+                                        <div class="title">
+                                            <p class="display-inline title-root">Thông tin cá nhân_20205047</p>
+                                            <input type="text" class=" input-title display-none" value="Thông tin cá nhân_20205047">
+                                        </div>
+                                        <div class="box ">
+                                            <p class="icon addItem">Add Info Item</p>
+                                            <p class="icon addGroup">Add Group Item</p>
+                                        </div>
+                                    </legend>
+                                    <div class="person-root">
+                                        <div class="item-div">
+                                            
+                                            <p class="label display-inline item-add item-name">Họ và tên: </p><input type="text" class="item-add label display-none" value="Họ và tên"><input type="text" class="display-inline hoten item-add"/><i class="fa-solid fa-trash-can delete" style="color: #403f3f;"></i><br/>
+
+                                        </div>
+                                        <div class="item-div">
+                                            <p class="label display-inline item-add item-name">Năm vào trường: </p><input type="text" class="item-add label display-none" value="Năm vào trường"><input type="number" class="display-inline namvaotruong item-add"/><i class="fa-solid fa-trash-can delete" style="color: #403f3f;"></i><br/>
+                                        </div>
+                                        <div class="item-div">
+                                            <p class="label display-inline item-add item-name">Bậc đào tạo: </p><input type="text" class="item-add label display-none" value="Bậc đào tạo"><input type="text" class="display-inline bacdaotao item-add"/><i class="fa-solid fa-trash-can delete" style="color: #403f3f;"></i><br/>
+                                        </div>
+                                        <div class="item-div">
+                                            <p class="label display-inline item-add item-name">Chương trình: </p><input type="text" class="item-add label display-none" value="Chương trình"><input type="text" class="display-inline chuongtrinh item-add" /><i class="fa-solid fa-trash-can delete" style="color: #403f3f;"></i><br/>
+                                        </div>
+                                        <div class="item-div">
+                                            <p class="label display-inline item-add item-name">Khoa/Viện quản lý: </p><input type="text" class="item-add label display-none" value="Khoa/Viện quản lý"><input type="text" class="display-inline khoavienquanly item-add" /><i class="fa-solid fa-trash-can delete" style="color: #403f3f;"></i><br/>
+                                        </div>
+                                        <div class="item-div">
+                                            <p class="label display-inline item-add item-name">Tình trạng học tập: </p><input type="text" class="item-add label display-none" value="Tình trạng học tập"><input type="text" class="isplay-inline tinhtrang item-add" /><i class="fa-solid fa-trash-can delete" style="color: #403f3f;"></i><br/>
+                                        </div>
+                                        <div class="item-div">
+                                            <p class="label display-inline item-add">Giới tính: </p>
+                                            <div class="item-add sex">
+                                                <form class="display-inline gioitinh item" action="index.php" method="post">
+                                                    <input name="gender" type="radio"  id="male" class="gender"  value="Nam" checked />Nam
+                                                    <input name="gender" type="radio"  id="female" class="gender" value="Nữ"/>Nữ
+                                                </form>
+                                            </div>
+                                            <i class="fa-solid fa-trash-can delete" style="color: #403f3f;"></i><br/>
+                                        </div>
+                                        <div class="item-div">
+                                            <p class="label display-inline item-add item-name">Lớp: </p><input type="text" class="item-add label display-none" value="Lớp"><input type="text" class="display-inline lop item-add" /><i class="fa-solid fa-trash-can delete" style="color: #403f3f;"></i><br/>
+                                        </div>
+                                        <div class="item-div">
+                                            <p class="label display-inline item-add item-name">Khoá học: </p><input type="text" class="item-add label display-none" value="Khoá học">
+                                            <select class="display-inline khoahoc item-add">
+                                                <option value="0"></option>
+                                                <option value="65">65</option>
+                                                <option value="64">64</option>
+                                                <option value="63">63</option>
+                                                <option value="62">62</option>
+                                                <option value="61">61</option>
+                                            </select>
+                                            <i class="fa-solid fa-trash-can delete" style="color: #403f3f;"></i><br/>
+                                        </div>
+                                        <div class="item-div">
+                                            <p class="label display-inline item-add item-name">Email:</p><input type="text" class="item-add label display-none" value="Email">
+                                            <input type="email" class="display-inline item-add"/><i class="fa-solid fa-trash-can delete" style="color: #403f3f;"></i><br/>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="person-add"></div>
+
+                                </fieldset>
+                            </div>
+                            <div class="add-div"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer"></div>
+            </div>
+            
+        </body>
+        
+        
+</html>
