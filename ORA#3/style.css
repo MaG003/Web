@@ -1,0 +1,288 @@
+
+/* Chia bố cục trang */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding-top: 20px;
+    background-color: white;
+}
+.container{
+    display: grid;
+    height: auto;
+    
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr 100px;
+    row-gap: 10px;
+    grid-template-areas:
+    "sidebar content"
+    "footer footer";
+}
+.sidebar{
+    grid-area: sidebar;
+    display: grid;
+    row-gap: 30px;
+}
+.footer{
+    grid-area: footer;
+    background-attachment: fixed;
+    background-image: url('Footer.jpg');
+    background-position: right top;
+    width: auto;
+    height: 150px;
+}
+
+
+
+/* Phần Sidebar */
+.sidebar-block{
+    background-color: rgb(242,241,236);
+    
+}
+
+
+#avatar{
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    
+}
+.title-name{
+    display: inline-block;
+    margin: 10px 35px ;
+    
+}
+.name{
+    display: inline-block;
+    margin:15px 0px 15px 10px;
+    position: absolute;
+    
+}
+
+
+/* Phần Content */
+.head{
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+.head-center{
+    text-align: center;
+    padding: 20px;
+}
+.head-left{
+    text-align: left;
+    border-bottom: 4px solid orange;
+    padding: 25px 0px;
+}
+.head-right{
+    text-align: right;
+    border-bottom: 4px solid orange;
+    padding: 25px;
+}
+
+.option{
+    color: rgb(51,122,183);
+    border-bottom: 0.5px solid rgb(204,204,204);
+    padding: 8px;
+    
+}
+.header{
+    grid-area: header;
+    border-bottom: 0.1px solid rgb(199,214,224);
+    
+}
+.image{
+    grid-area: image;
+    text-align: center;
+    
+}
+
+.note{
+    grid-area: note;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 16px 0px;
+}
+
+
+.img{
+    
+    width: 180px;
+    height: 220px;
+    margin: 25px 0px 15px 0px;
+    box-shadow: 10px 10px 10px  rgb(168, 218, 235), 6px 8px 5px rgba(67, 23, 6, 0.19) ;
+}
+
+.label{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    padding-left: 30px;
+    margin: 15px;
+    
+}
+
+
+
+#edit{
+    cursor: pointer;
+}
+
+.display-inline{
+    display: inline-block;
+}
+
+
+.display-none{
+    display: none;
+}
+
+
+.thongtin{
+    float: left;
+}
+
+
+
+.icon-mul{
+    float: right;
+    margin-right: 150px;
+    
+}
+
+
+#submit-btn{
+    cursor: pointer;
+    width: 50px;
+    background-color: rgb(224, 203, 15);
+}
+.gender{
+    margin-left: 20px;
+}
+
+.item{
+    border: 2px solid red;
+    display: block;
+    /* width: 100%; */
+    
+    
+}
+.content{
+    grid-area: content;
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+    "header-content"
+    "content-content";
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.header-content{
+    grid-area: header-content;
+    padding: 30px;
+}
+.content-content{
+    grid-area: content-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+}
+
+.title{
+    float: left;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(82, 82, 145);
+    width: 600px;
+    
+    
+}
+.box{
+    float: right;
+    
+}
+
+fieldset{
+    border: 2px solid orange;
+}
+.icon{
+    cursor: pointer;
+    margin: 10px 40px;
+    border: 1px solid rgb(92, 156, 177);
+    color: black;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: rgb(184, 203, 209);
+    display: inline-block;
+}
+.legend{
+    text-align: left;
+    width: 100%;
+}
+.delete{
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 25px;
+
+}
+.delete-mul{
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 25px;
+}
+.person-root{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.person-add{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.item-add{
+
+    width: 200px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    margin: 10px 50px;
+
+}
+.sex{
+    display: inline-block;
+}
+.item-div{
+    text-align: center;
+    padding: 5px;
+}
+.item-div1{
+    text-align: center;
+    padding: 5px;
+}
+#pdf{
+    cursor: pointer;
+}
+.input-title{
+    /* display: inline-block; */
+    width: 300px;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(82, 82, 145);
+}
+.title-infor{
+    display: inline-block;
+
+}
+input{
+    border-color: rgb(221, 9, 9);
+    
+}
